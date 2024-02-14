@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;  line-height: 1.6;
+            color: #333;
+            background-color: #F5EEDC;
+          }
+          
+          header {
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+          }
+          
+          h1 {
+            margin: 0;
+          }
+          
+          main {
+            padding: 20px;
+          }
+          
+          aside {
+            background-color: #eee;
+            padding: 20px;
+            margin-bottom: 20px;
+          }
+          
+          h3 {
+            margin: 0 0 10px;
+          }
+          
+          h5 {
+            margin: 0;
+            color: #666;
+          }
+          
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+          
+          ul {
+            list-style-type: none;
+            padding: 0;
+          }
+          
+          li {
+            margin-bottom: 5px;
+          }
+          .iten_1{
+            margin-left: 100px;
+          }
+          
+          .container {
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          
+          .headline {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+          
+          .article {
+            float: left;
+            width: 70%;
+          }
+          
+          .sidebar {
+            float: right;
+            width: 25%;
+          }
+
+          .map{
+            margin-left: 70px;
+            margin-bottom: 30px;
+          }
+
+
+          .button {
+            position: relative;
+            padding: 10px 22px;
+            border-radius: 6px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background-color: #7d2ae8;
+            transition: all 0.2s ease;
+          }
+          
+          .button:active {
+            transform: scale(0.96);
+          }
+          
+          .button:before,
+          .button:after {
+            position: absolute;
+            content: "";
+            width: 150%;
+            left: 50%;
+            height: 100%;
+            transform: translateX(-50%);
+            z-index: -1000;
+            background-repeat: no-repeat;
+          }
+          
+          .button:hover:before {
+            top: -70%;
+            background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+            background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+              10% 10%, 18% 18%;
+            background-position: 50% 120%;
+            animation: greentopBubbles 0.6s ease;
+          }
+          
+          @keyframes greentopBubbles {
+            0% {
+              background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+                40% 90%, 55% 90%, 70% 90%;
+            }
+          
+            50% {
+              background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+                50% 50%, 65% 20%, 90% 30%;
+            }
+          
+            100% {
+              background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+                50% 40%, 65% 10%, 90% 20%;
+              background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+          }
+          
+          .button:hover::after {
+            bottom: -70%;
+            background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+            background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+            background-position: 50% 0%;
+            animation: greenbottomBubbles 0.6s ease;
+          }
+          
+          @keyframes greenbottomBubbles {
+            0% {
+              background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+                70% -10%, 70% 0%;
+            }
+          
+            50% {
+              background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+                105% 0%;
+            }
+          
+            100% {
+              background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+                110% 10%;
+              background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+          }
+
+
+
+          
+          @media (max-width: 768px) {
+            .article,
+            .sidebar {
+              width: 100%;
+            }
+          }
+    </style>
+</head>
+<body>
+    
+    <div class="clasic-tour-section">
+        <div class="container">
+           <div class="clasic-tour-cont">
+              <div class="clasic-tour-cont-left">
+                 <div class="clasic-tour-head">
+                    <h1>Varanasi Pilgrimage Tour</h1>
+                    <p>Give yourself a delightful treat of spirituality in Varanasi. Often reckoned amongst the world’s oldest cities, Varanasi is bliss for every traveller who wishes to learn about Hindu religion along with the culture and traditions. Our Varanasi pilgrimage tour covers all the popular religious sites that cannot be missed while vacationing in Varanasi. Vishwanath Temple, Annapurna Temple, Sankat Mochan, Manas Mandir and Bharat Mata Mandir are some famous religious sites in Varanasi that you will visit on this amazing excursion. Besides, the key highlight of the entire expedition is the much famous evening Ganga Aarti on the banks of Ganges River that you are going to be a part of. Not just this, our Varanasi tour also includes a boat ride experience on the waters of River Ganges. Adding a unique charm in this entire expedition is our impeccable services that guarantee to proffer you an amazing holiday experience in Varanasi. To know more about the tour, check out the below-mentioned 1N/2D Varanasi itinerary. </p>
+                    <div class="itnerary-section">
+                       <div class="itnerary-section-head">
+                          <h3>Itinerary</h3>
+                          <div class="itnerary-red-hoz"><img src="./red-hoz.png" alt="Itinerary"></div>
+                       </div>
+                       <div class="itnerary-section-left">
+                          <ul>
+                             <li>
+                                <figure>
+                                   <img src="./day-1.png">
+                                  <section class="iten_1">
+                                   <figcaption>
+                                      <h4>Arrival in Varanasi</h4>
+                                      <ul>
+                                         <li>1- Your wonderful Varanasi tour with Tour My India will start with your arrival at the Varanasi airport/railway station (whichever of your choice).</li>
+                                         <li>2- At the airport/station,</li>
+                                         <li>3- You will go you to a pre-booked hotel(Recommender by travelhowl).</li>
+                                         <li>4- After getting freshened up, you will be served with a delectable lunch at the hotel.</li>
+                                         <li>5- Followed by lunch, you will be taken on a sightseeing tour of Varanasi.</li>
+                                         <li>6- On the tour, you will visit some <a href="#" target="_blank" class="hover-a">top tourist attractions of Varanasi</a> like Annapurna Temple, Vishwanath Temple, Sankat Mochan (Hanuman Temple), Bharat Mata Temple, Banaras Hindu University (BHU) and Manas Mandir.</li>
+                                         <li>7- After the sightseeing tour, in the evening, be ready to witness a surreal sight of Ganga Aarti on the banks of River Ganges.</li>
+                                         <li>8- For dinner and overnight stay, you will be taken back to the same hotel.</li>
+                                      </ul>
+                                   </figcaption>
+                                </section>
+                                </figure>
+                             </li>
+                             <li>
+                                <figure>
+                                   <img src="./day-2.png">
+                                   <section class="iten_1">
+                                   <figcaption>
+                                      <h4>Varanasi Sightseeing</h4>
+                                      <ul>
+                                         <li>1- The day will start early with an early morning boat ride on the waters of River Ganges.</li>
+                                         <li>2- This boat ride allows you to relish the beautiful sights of people offering water to Sun God along with taking a holy dip in the water of the river.</li>
+                                         <li>3- Through the boat ride, you will also be taken to all the popular Ghats of Varanasi.</li>
+                                         <li>4- After that you will go for delicious breakfast from popular Restaurant.</li>
+                                         <li>5- Post breakfast, be ready to go out for another Varanasi sightseeing tour.</li>
+                                         <li>6- On the tour, visit the much famous village of Sarnath. It’s the place where <a href="#" target="_blank" class="hover-a">Lord Buddha</a> delivered his first sermon to his disciples.</li>
+                                         <li>7- In the village, you will explore Buddha temples, the Dhamekha stupa, Chaukhandi stupa and the archaeological museum.</li>
+                                         <li>8- Thereafter, in the evening, you will be go to the airport/railway station.</li>
+                                         <li>9- Upon arrival, board your flight/train back home.</li>
+                                      </ul>
+                                    </figcaption>
+                                    </section>
+                                </figure>
+                             </li>
+                          </ul>
+                       </div>
+                      
+                      <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.24588681401!2d82.90870727116949!3d25.320739742503015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1707657016219!5m2!1sen!2sin" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                      </div>
+                      <button class="button">
+                        <a style="text-decoration: none; color:#fff;" href="./banaras.php">Back to Main Page</a> 
+                       </button>
+                    </div>
+                 </div>
+              </div>
+              </div>
+           </div>
+        </div>
+     </div>
+</body>
+</html>

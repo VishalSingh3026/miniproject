@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;  line-height: 1.6;
+            color: #333;
+            background-color: #F5EEDC;
+          }
+          
+          header {
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+          }
+          
+          h1 {
+            margin: 0;
+          }
+          
+          main {
+            padding: 20px;
+          }
+          
+          aside {
+            background-color: #eee;
+            padding: 20px;
+            margin-bottom: 20px;
+          }
+          
+          h3 {
+            margin: 0 0 10px;
+          }
+          
+          h5 {
+            margin: 0;
+            color: #666;
+          }
+          
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+          
+          ul {
+            list-style-type: none;
+            padding: 0;
+          }
+          
+          li {
+            margin-bottom: 5px;
+          }
+          .iten_1{
+            margin-left: 100px;
+          }
+          
+          .container {
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          
+          .headline {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+          
+          .article {
+            float: left;
+            width: 70%;
+          }
+          
+          .sidebar {
+            float: right;
+            width: 25%;
+          }
+
+          .map{
+            margin-left: 70px;
+            margin-bottom: 30px;
+          }
+
+
+          .button {
+            position: relative;
+            padding: 10px 22px;
+            border-radius: 6px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background-color: #7d2ae8;
+            transition: all 0.2s ease;
+          }
+          
+          .button:active {
+            transform: scale(0.96);
+          }
+          
+          .button:before,
+          .button:after {
+            position: absolute;
+            content: "";
+            width: 150%;
+            left: 50%;
+            height: 100%;
+            transform: translateX(-50%);
+            z-index: -1000;
+            background-repeat: no-repeat;
+          }
+          
+          .button:hover:before {
+            top: -70%;
+            background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+            background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+              10% 10%, 18% 18%;
+            background-position: 50% 120%;
+            animation: greentopBubbles 0.6s ease;
+          }
+          
+          @keyframes greentopBubbles {
+            0% {
+              background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+                40% 90%, 55% 90%, 70% 90%;
+            }
+          
+            50% {
+              background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+                50% 50%, 65% 20%, 90% 30%;
+            }
+          
+            100% {
+              background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+                50% 40%, 65% 10%, 90% 20%;
+              background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+          }
+          
+          .button:hover::after {
+            bottom: -70%;
+            background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+            background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+            background-position: 50% 0%;
+            animation: greenbottomBubbles 0.6s ease;
+          }
+          
+          @keyframes greenbottomBubbles {
+            0% {
+              background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+                70% -10%, 70% 0%;
+            }
+          
+            50% {
+              background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+                105% 0%;
+            }
+          
+            100% {
+              background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+                110% 10%;
+              background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+          }
+
+
+
+          
+          @media (max-width: 768px) {
+            .article,
+            .sidebar {
+              width: 100%;
+            }
+          }
+    </style>
+</head>
+<body>
+    
+    <div class="clasic-tour-section">
+        <div class="container">
+           <div class="clasic-tour-cont">
+              <div class="clasic-tour-cont-left">
+                 <div class="clasic-tour-head">
+                    <h1>Down to the river to pray</h1>
+                    <p>On the banks of the Ganges River, Varanasi is considered India’s holiest city. It’s also among the oldest continuously inhabited cities on earth. A visit here can be intense, but it’s one of the best places to go to learn about India’s spiritual traditions. Many of the things to do in Varanasi revolve around visiting temples and riverfront ghats (steps that lead down to the waters), and it’s just a short jaunt from Sarnath, famed as the spot where it's believed that Gautama Buddha gave his first sermon.</p>
+                     <div class="itnerary-section">
+                       <div class="itnerary-section-head">
+                          <h3>Itinerary</h3>
+                          <div class="itnerary-red-hoz"><img src="./red-hoz.png" alt="Itinerary"></div>
+                       </div>
+                       <div class="itnerary-section-left">
+                          <ul>
+                             <li>
+                                <figure>
+                                   <img src="./day1.jpeg">
+                                  <section class="iten_1">
+                                   <figcaption>
+                                      <h4>Arrival in Varanasi</h4>
+                                      <ul>
+                                         <li>Devote your first day in Varanasi to the city’s essential sights. 
+                                          Start with an early-morning boat ride on the Ganges River, which reveals Hindu pilgrims performing sunrise prayers and rituals.
+                                           After your boat ride, take an early-morning tour of old Varanasi with a local guide, during which you’ll learn the history of Dasaswamedh Ghat and Talang Swami Ashram. 
+                                           Spend the afternoon visiting some of the city’s holiest spots, which include Golden Temple (Kashi Vishwanath); 
+                                           it's believed that those who make a pilgrimage here gain liberation from the karmic cycle of death and rebirth. 
+                                           In the evening, head down to Dashashwamedh Ghat to watch the evening Aarti, an atmospheric ceremony during which priests make offerings to the Ganges River.</li>
+                                      </ul>
+                                   </figcaption>
+                                </section>
+                                </figure>
+                             </li>
+                             <li>
+                                <figure>
+                                   <img src="./day2.jpeg">
+                                   <section class="iten_1">
+                                   <figcaption>
+                                      <h4>Varanasi Sightseeing</h4>
+                                      <ul>
+                                         <li>Dedicate your second day to exploring the UNESCO World Heritage Site of Sarnath, one of the most important Buddhist pilgrimage sites in India,
+                                           on a half-day tour. Visit the Dhamek Stupa, where the Buddha is reputed to have giver his first sermon after attaining enlightenment, 
+                                           and the Sarnath Archeological Museum, which houses almost 7,000 Buddhist artifacts. In the afternoon, head out on a tour of Varanasi’s rural villages;
+                                            most tours stop at the town of Sarai Mohana, a great place to shop for silk saris, and Chiraigaon, where visitors can learn about rural life. 
+                                            Top off your day of exploration with a cooking class and dinner in a local home before turning in for the night.</li>
+                                    </figcaption>
+                                    </section>
+                                </figure>
+                             </li>
+                             <img src="./day3.jpeg">
+                             <section class="iten_1">
+                             <figcaption>
+                                <h4>Explore Prayagraj</h4>
+                                <ul>
+                                   <li>Spend your final day in Prayagraj, a 3-hour drive from Varanasi. Formerly known as Allahabad, 
+                                    Prayagraj is the second-oldest inhabited city in India and an important pilgrimage site; 
+                                    it’s also one of four destinations for Kumbh Mela, the largest spiritual gathering in the world.
+                                     Start your day with a visit to the Triveni Sangam, the confluence of the Ganges, Yamuna, and Saraswati Rivers, before heading to the Allahabad Fort, a 16th-century Mughal Fort with great riverside views. 
+                                     Other popular attractions include the Anand Bhavan, an old museum that was once the headquarters of the Indian National Congress, which is worth a stop for anyone interested in political history. 
+                                     Finish your day with a visit to Khusro Bagh, a beautifully-manicured Mughal garden with a number of well-preserved Mughal mausoleums.</li>
+                              </figcaption>
+                              </section>
+                          </figure>
+                            </ul>
+                       </div>
+                      
+                      <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.24588681401!2d82.90870727116949!3d25.320739742503015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1707657016219!5m2!1sen!2sin" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                      </div>
+                      <button class="button">
+                        <a style="text-decoration: none; color:#fff;" href="./frontend/travelhowl/firstpage.html">Back to Main Page</a> 
+                       </button>
+                    </div>
+                 </div>
+              </div>
+              </div>
+           </div>
+        </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;  line-height: 1.6;
+            color: #333;
+            background-color: #F5EEDC;
+          }
+          
+          header {
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+          }
+          
+          h1 {
+            margin: 0;
+          }
+          
+          main {
+            padding: 20px;
+          }
+          
+          aside {
+            background-color: #eee;
+            padding: 20px;
+            margin-bottom: 20px;
+          }
+          
+          h3 {
+            margin: 0 0 10px;
+          }
+          
+          h5 {
+            margin: 0;
+            color: #666;
+          }
+          
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+          
+          ul {
+            list-style-type: none;
+            padding: 0;
+          }
+          
+          li {
+            margin-bottom: 5px;
+          }
+          .iten_1{
+            margin-left: 100px;
+          }
+          
+          .container {
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          
+          .headline {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+          
+          .article {
+            float: left;
+            width: 70%;
+          }
+          
+          .sidebar {
+            float: right;
+            width: 25%;
+          }
+
+          .map{
+            margin-left: 70px;
+            margin-bottom: 30px;
+          }
+
+
+          .button {
+            position: relative;
+            padding: 10px 22px;
+            border-radius: 6px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background-color: #7d2ae8;
+            transition: all 0.2s ease;
+          }
+          
+          .button:active {
+            transform: scale(0.96);
+          }
+          
+          .button:before,
+          .button:after {
+            position: absolute;
+            content: "";
+            width: 150%;
+            left: 50%;
+            height: 100%;
+            transform: translateX(-50%);
+            z-index: -1000;
+            background-repeat: no-repeat;
+          }
+          
+          .button:hover:before {
+            top: -70%;
+            background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+            background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+              10% 10%, 18% 18%;
+            background-position: 50% 120%;
+            animation: greentopBubbles 0.6s ease;
+          }
+          
+          @keyframes greentopBubbles {
+            0% {
+              background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+                40% 90%, 55% 90%, 70% 90%;
+            }
+          
+            50% {
+              background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+                50% 50%, 65% 20%, 90% 30%;
+            }
+          
+            100% {
+              background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+                50% 40%, 65% 10%, 90% 20%;
+              background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+          }
+          
+          .button:hover::after {
+            bottom: -70%;
+            background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+              radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+            background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+            background-position: 50% 0%;
+            animation: greenbottomBubbles 0.6s ease;
+          }
+          
+          @keyframes greenbottomBubbles {
+            0% {
+              background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+                70% -10%, 70% 0%;
+            }
+          
+            50% {
+              background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+                105% 0%;
+            }
+          
+            100% {
+              background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+                110% 10%;
+              background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+          }
+
+
+
+          
+          @media (max-width: 768px) {
+            .article,
+            .sidebar {
+              width: 100%;
+            }
+          }
+    </style>
+</head>
+<body>
+    
+    <div class="clasic-tour-section">
+        <div class="container">
+           <div class="clasic-tour-cont">
+              <div class="clasic-tour-cont-left">
+                 <div class="clasic-tour-head">
+                    <h1>HAR HAR GANGE </h1>
+                    <p>Due to its position on the banks of the sacred Ganges River, Varanasi is considered the holiest place in India for devout Hindus. Even with just one day, you’ll have time to experience the pulse of this city and check out some of Varanasi’s top attractions. Here’s how to do it.</p>
+                    <div class="itnerary-section">
+                       <div class="itnerary-section-head">
+                          <h3>1 DAY PLAN AT Varanasi</h3>
+                         
+                       </div>
+                       <div class="itnerary-section-left">
+                          <ul>
+                             <li>
+                                <figure>
+                                   <img src="SUNRISE.jpg">
+                                  <section class="iten_1">
+                                   <figcaption>
+                                      <h4>Arrival in Varanasi(Morning)</h4>
+                                      <ul>
+                                         <li>Wake before dawn and prepare yourself for the quintessential Varanasi experience: a sunrise boat ride on the Ganges River. You’ll be paddled along the sacred river—passing pilgrims performing early-morning rituals along riverside ghats (riverside steps)—just as the sun is beginning to rise. After your boat ride, continue exploring the area around the river with a guide; walking tours help you navigate the labyrinthine lanes of Old Varanasi and lead you to some of the city’s most important temples and ghats, which include the Golden Temple (Kashi Vishwanath) and Kedar Ghat.</li>
+                                      </ul>
+                                   </figcaption>
+                                </section>
+                                </figure>
+                             </li>
+                             <li>
+                                <figure>
+                                   <img src="Ganga_Dwar,_Gateway_of_Corridor_of_Kashi_Vishwanath_Temple,_Varanasi_2.webp.png">
+                                   <section class="iten_1">
+                                   <figcaption>
+                                      <h4>Varanasi Sightseeing(Afternoon)</h4>
+                                      <ul>
+                                         <li>In the afternoon, head out to Sarnath, a small town that’s only 30 minutes from Varanasi by car. As one of the four main Buddhist pilgrimage centers in India, the UNESCO World Heritage Site is full of beautiful old stupas and temples. Guided tours, which provide crucial historical and religious context, typically cover the Chaukhandi Stupa and the Dhamek Stupa, which commemorates where the Buddha allegedly gave his first sermon. The Sarnath Museum, home to almost 7,000 Buddhist art and artifacts, is also worth a visit.</li>
+                                    </figcaption>
+                                    </section>
+                                </figure>
+                             </li>
+                             <img src="Sarayu_River_night_view,_Ayodhya_001.jpg">
+                             <section class="iten_1">
+                             <figcaption>
+                                <h4>GANGA AARTI-(evening)</h4>
+                                <ul>
+                                   <li>In the evening, make your way back to Varanasi in time for Aarti, an evening prayer ceremony on the banks of the Ganges River. Starting just after sunset, this hour-long ritual takes place at Dashashwamedh Ghat and involves a group of traditionally-clad Hindu priests paying their respects to the holy river. Witnessing the priests play large brass lanterns to the tune of traditional religious hymns is a magical experience that’s best experienced with a guide for context. After the ceremony, grab dinner at one of the many rooftop restaurants in the area for a final glimpse of the Ganges River.</li>
+                              </figcaption>
+                              </section>
+                          </figure>
+                            </ul>
+                       </div>
+                      
+                      <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.24588681401!2d82.90870727116949!3d25.320739742503015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1707657016219!5m2!1sen!2sin" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                      </div>
+                      <button class="button">
+                        <a style="text-decoration: none; color:#fff;" href="./banaras.php">Back to Main Page</a> 
+                       </button>
+                    </div>
+                 </div>
+              </div>
+              </div>
+           </div>
+        </div>
+     </div>
+</body>
+</html>

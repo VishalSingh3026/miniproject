@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Review System</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Review System</h1>
+
+        <!-- Form for submitting reviews and photos -->
+        <form id="reviewForm" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" required>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" required></textarea>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" accept="image/*">
+
+            <button type="button" onclick="submitReview()">Submit Review</button>
+        </form>
+
+        <!-- Display reviews with photos -->
+        <!-- <div id="reviewsContainer">
+            <h2>Recent Reviews</h2>
+            <ul id="reviewsList"></ul>
+        </div> -->
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

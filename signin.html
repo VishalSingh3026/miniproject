@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .block{
+            
+            
+
+            display: flexbox;
+            background-color: #ECE3CE;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+            padding-top: 5px;
+            padding-bottom: 100px;
+            padding-left: 50px;
+            padding-right: 50px;
+            margin: 80px 400px 100px 500px;
+            border-radius: 1.5rem;
+        }
+        .body{
+            height: 500px;
+            width: 400px;
+            align-content: center;
+        }
+        .abc2{
+            width: 200px;
+            background-color: blue;
+            color: white;
+        }
+        input{
+            width: 200px;
+            height: 30px;
+        }
+        h1{
+            
+            padding-top: 10px;
+        }
+        .button{
+
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+       <div class="travelhowl"><h1>travelhowl</h1></div> 
+       <div class="abc1">
+        <form action="authenticate.php" method="post">
+            <input type="text" placeholder="username or email"  name="email" required><br><br>
+            <input type="password" placeholder="Password" name="password" required><br><br>
+            <a class="forgotpassword" href="">Forgot password?</a><br><br><br>
+            <div class="button">
+                <button class="abc2" type="submit">Log in</button>
+            </div>
+            <div class="button">
+                <a href="signin.html"><button class="abc2" type="submit">Sign up</button></a>
+            </div>
+
+
+        </form>
+       </div>
+    </div>
+</body>
+</html>
